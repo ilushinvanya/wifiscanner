@@ -1,17 +1,18 @@
 <template>
+	
     <div id="app">
-
+	<button @click="getData()">OBNOVIT</button>
         <Hello v-for="(network, index) in networks"
                :key="index"
                :obj="network"></Hello>
 
-        <pre>{{networks}}</pre>
+        <!-- <pre>{{networks}}</pre> -->
     </div>
 </template>
 
 <script>
     import Hello from './components/Network.vue'
-//    import axios from 'axios'
+    import axios from 'axios'
     import jsonp from 'jsonp'
 
     export default {
@@ -28,9 +29,16 @@
         methods:{
             getData(){
                 var self = this;
-                jsonp("http://localhost:3002/", null, function(data){
-                    self.networks = data.data;
-                })
+		
+		axios.get("http://localhost:3002/").then((data)=>{
+			var data_sort = data.data.sort(function(a,b){  return b.signal_level-a.signal_level })
+
+
+			self.networks = data_sort;
+		})
+
+
+
             }
         }
     }
@@ -41,14 +49,8 @@
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
         display:flex;
-        .item {
-            border:1px black solid;
-            margin: 20px;
-            text-align: left;
-        }
+	flex-wrap:wrap;
     }
 </style>

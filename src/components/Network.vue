@@ -3,7 +3,7 @@
         <input type="text" v-model="room"/>
         <p>ssid: {{obj.ssid}}</p>
         <p>mac: {{obj.mac}}</p>
-        <p>signal: {{obj.signal}}</p>
+        <p>signal: <span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}">  </span>{{obj.signal_level}}</p>
         <p>channel: {{obj.channel}}</p>
         <button @click="submit()">OK</button>
     </div>
@@ -51,19 +51,19 @@
 
                     if(this.room){
                         axios.put(`http://localhost:3001/rooms/${this.id}`, obj).then((data)=>{
-                            console.log(data.data)
+                            //console.log(data.data)
                             self.getRoom()
                         })
                     }else{
                         axios.delete(`http://localhost:3001/rooms/${this.id}`).then((data)=>{
-                            console.log(data.data)
+                            //console.log(data.data)
                             self.getRoom()
                         })
                     }
 
                 }else{
                     axios.post(`http://localhost:3001/rooms/`, obj).then((data)=>{
-                        console.log(data.data)
+                        //console.log(data.data)
                         self.getRoom()
                     })
                 }
@@ -77,13 +77,27 @@
 <style scoped lang="scss">
     .item {
         padding: 10px;
+	border:1px black solid;
+        margin: 20px;
+        text-align: left;
         &.yes {
             background: #e4ffde;
         }
 
         p {
-            /*margin: 0*/
+            span {
+		background-image:
+    			linear-gradient(
+      				to left, #54f954, #de6363
+    			);
+    		height: 10px;
+    		display: inline-block;
+		}
         }
+	button {
+		width:100%;	
+		line-height:50px;		
+	}
 
     }
 
