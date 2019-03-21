@@ -4,12 +4,15 @@
         <Hello v-for="(network, index) in networks"
                :key="index"
                :obj="network"></Hello>
+
+        <pre>{{networks}}</pre>
     </div>
 </template>
 
 <script>
     import Hello from './components/Network.vue'
-    import axios from 'axios'
+//    import axios from 'axios'
+    import jsonp from 'jsonp'
 
     export default {
         name: 'app',
@@ -25,7 +28,7 @@
         methods:{
             getData(){
                 var self = this;
-                return axios.get("http://localhost:3000/wifiscanner").then((data) => {
+                jsonp("http://localhost:3002/", null, function(data){
                     self.networks = data.data;
                 })
             }

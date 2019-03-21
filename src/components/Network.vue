@@ -28,7 +28,7 @@
         methods:{
             getRoom(){
                 var self = this;
-                axios.get(`http://localhost:3000/rooms?mac=${this.obj.mac}`).then((data)=>{
+                axios.get(`http://localhost:3001/rooms?mac=${this.obj.mac}`).then((data)=>{
                     if(data.data.length > 0){
                         self.room = data.data[0].room;
                         self.id = data.data[0].id;
@@ -50,19 +50,19 @@
 
 
                     if(this.room){
-                        axios.put(`http://localhost:3000/rooms/${this.id}`, obj).then((data)=>{
+                        axios.put(`http://localhost:3001/rooms/${this.id}`, obj).then((data)=>{
                             console.log(data.data)
                             self.getRoom()
                         })
                     }else{
-                        axios.delete(`http://localhost:3000/rooms/${this.id}`).then((data)=>{
+                        axios.delete(`http://localhost:3001/rooms/${this.id}`).then((data)=>{
                             console.log(data.data)
                             self.getRoom()
                         })
                     }
 
                 }else{
-                    axios.post(`http://localhost:3000/rooms/`, obj).then((data)=>{
+                    axios.post(`http://localhost:3001/rooms/`, obj).then((data)=>{
                         console.log(data.data)
                         self.getRoom()
                     })
