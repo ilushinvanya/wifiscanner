@@ -1,0 +1,35 @@
+{
+	tags: {
+		custom:{
+			name: "Polzovatelskie sohraneno",
+			rooms:[192,193,195],
+			class:"user_vote",
+			icon:"save.ico",
+			photo:"url"
+		},
+
+		toilets:{},
+		shops:{},
+		lestnici:{},
+		info:{},
+		evacuate:{name:"Avarijnij vihod"},
+
+		parade_lestnici:{},
+		holls:{},
+
+		leonardo:{},
+		tician:{},
+		ayvazovski:{},
+		malevitch:{},
+
+		before1000:{
+			name: "Do 1000 goda",
+			rooms:[292,293,295],
+			class:"color_dark"
+		},
+		
+		africa:{},
+		china:{},
+		italy:{}
+	}
+}

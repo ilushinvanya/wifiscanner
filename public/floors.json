@@ -1,0 +1,39 @@
+
+{
+	floors: {
+		1: {
+			rooms: [
+    				{
+					id: 1,
+					number: "123",
+      					name: "Horovoe penie",
+					path: "M 0.0, d 3.3", // poprobovat ne zamikat' liniu
+					url: "url.wikipedia",
+					descr: "lalala la la pishi nehochu",
+					network:{
+						mac: "05:23:77:66:77",
+						ssid: "Samsung",
+					},
+					photo: "url.jpg",
+					custom: true / false, // te rooms kotorie ya sam dobavil
+					close: true / false,
+					target: "naznachenie / teh / gallery / holls",
+					evacuate: "path M 0.0" // liniya evacuacii dly etoj komnati
+    				}
+			],
+			evacuate: {
+				path: "M 0.0" // plan evacuacii llya vsego etaga
+			}
+		},
+		2: {
+			rooms:[],
+			evacuate:{
+				paths:[]
+			}
+		},
+		3: {
+			rooms:[],
+			evacuate:{}
+		}
+	}
+}
