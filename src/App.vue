@@ -1,12 +1,12 @@
 <template>
-	
+
     <div id="app">
-	<button @click="getData()">OBNOVIT</button>
+        <button class="fixed_button" @click="getData()">OBNOVIT</button>
+
         <Hello v-for="(network, index) in networks"
                :key="index"
                :obj="network"></Hello>
 
-        <!-- <pre>{{networks}}</pre> -->
     </div>
 </template>
 
@@ -17,26 +17,27 @@
 
     export default {
         name: 'app',
-        data(){
+        data() {
             return {
-                networks:[]
+                networks: []
             }
         },
-        components: { Hello },
+        components: {Hello},
         mounted() {
             this.getData()
         },
-        methods:{
-            getData(){
+        methods: {
+            getData() {
                 var self = this;
-		
-		axios.get("http://localhost:3002/").then((data)=>{
-			var data_sort = data.data.sort(function(a,b){  return b.signal_level-a.signal_level })
+
+                axios.get("http://localhost:3002/").then((data) => {
+                    var data_sort = data.data.sort(function (a, b) {
+                        return b.signal_level - a.signal_level
+                    })
 
 
-			self.networks = data_sort;
-		})
-
+                    self.networks = data_sort;
+                })
 
 
             }
@@ -45,12 +46,21 @@
 </script>
 
 <style lang="scss">
+    body {
+        margin: 0;
+        padding: 0;
+    }
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         color: #2c3e50;
-        display:flex;
-	flex-wrap:wrap;
+        display: flex;
+        flex-wrap: wrap;
+        .fixed_button {
+            position: fixed;
+            top:0;
+            right:0;
+        }
     }
 </style>
