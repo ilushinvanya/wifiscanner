@@ -90,6 +90,7 @@
         border: 1px solid black; /* Граница вокруг ячеек */
     }
     .item {
+        font-size: 10px;
         padding: 2px;
         border: 1px #7c7c7c solid;
         margin: 2px;

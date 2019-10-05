@@ -73,7 +73,7 @@
         .fixed_button {
             position: fixed;
             top:0;
-            right:0;
+            left:0;
         }
         table {
             border: 1px black solid;
