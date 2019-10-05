@@ -76,7 +76,7 @@
             left:0;
         }
         table {
-            font-size: 11px;
+            font-size: 12px;
             border: 1px black solid;
             border-collapse: collapse;
         }
