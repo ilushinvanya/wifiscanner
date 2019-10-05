@@ -1,12 +1,14 @@
 <template>
     <tr class="item" :class="{ 'yes' : id}">
         <td>
-            <input type="text" style="width: 50px" v-model="room" placeholder="room number"/>
+            <input type="text"
+                   v-model="room"
+                   placeholder="room number"/>
         </td>
-        <td style="width: 150px">{{obj.ssid}}</td>
+        <td><p class="ssid">{{obj.ssid}}</p></td>
         <td>{{obj.mac}}</td>
         <td class="signal_level">
-            <span :style="{'width': 100 - Math.abs(parseInt(obj.signal_level)) + 'px'}"> </span>
+            <span :style="{'width': Math.abs(parseInt(obj.signal_level)) + 'px'}"> </span>
             {{obj.signal_level}}
         </td>
         <td>{{obj.channel}}</td>
@@ -93,10 +95,15 @@
             background: #e4ffde;
         }
 
+        input {
+            width: 50px;
+        }
         p {
             margin: 0;
-
-
+        }
+        .ssid {
+            width: 100px;
+            text-overflow: ellipsis;
         }
         .signal_level {
             background-image: linear-gradient(to left, #54f954, #de6363);
