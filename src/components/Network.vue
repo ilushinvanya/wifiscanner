@@ -1,12 +1,16 @@
 <template>
-    <div class="item" :class="{ 'yes' : id}">
-        <input type="text" v-model="room" placeholder="room number"/>
-        <p>ssid: {{obj.ssid}}</p>
-        <p>mac: {{obj.mac}}</p>
-        <p>signal: <span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}">  </span>{{obj.signal_level}}</p>
-        <p>channel: {{obj.channel}}</p>
-        <button @click="submit()">OK</button>
-    </div>
+    <tr class="item" :class="{ 'yes' : id}">
+        <td>
+            <input type="text" v-model="room" placeholder="room number"/>
+        </td>
+        <td>{{obj.ssid}}</td>
+        <td>{{obj.mac}}</td>
+        <td><span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}">  </span>{{obj.signal_level}}</td>
+        <td>{{obj.channel}}</td>
+        <td>
+            <button @click="submit()">OK</button>
+        </td>
+    </tr>
 </template>
 
 <script>
@@ -88,6 +92,7 @@
 
         p {
             margin: 0;
+
             span {
                 background-image: linear-gradient(to left, #54f954, #de6363);
                 height: 10px;

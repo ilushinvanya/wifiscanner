@@ -3,6 +3,16 @@
     <div id="app">
         <button class="fixed_button" @click="getData()">OBNOVIT</button>
 
+        <table>
+            <thead>
+                <th></th>
+                <th>ssid</th>
+                <th>mac</th>
+                <th>signal_level</th>
+                <th>channel</th>
+                <th></th>
+            </thead>
+        </table>
         <Hello v-for="(network, index) in networks"
                :key="index"
                :obj="network"></Hello>
