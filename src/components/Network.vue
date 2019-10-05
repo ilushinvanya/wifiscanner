@@ -1,7 +1,7 @@
 <template>
     <tr class="item" :class="{ 'yes' : id}">
         <td>
-            <input type="text" v-model="room" placeholder="room number"/>
+            <input type="text" style="width: 100px" v-model="room" placeholder="room number"/>
         </td>
         <td>{{obj.ssid}}</td>
         <td>{{obj.mac}}</td>
