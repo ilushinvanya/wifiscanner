@@ -5,7 +5,7 @@
 
         <table>
             <thead>
-                <th></th>
+                <th style="width: 100px"></th>
                 <th>ssid</th>
                 <th>mac</th>
                 <th>signal_level</th>
