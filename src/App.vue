@@ -12,10 +12,13 @@
                 <th>channel</th>
                 <th></th>
             </thead>
+            <tbody>
+            <Hello v-for="(network, index) in networks"
+                   :key="index"
+                   :obj="network"></Hello>
+            </tbody>
         </table>
-        <Hello v-for="(network, index) in networks"
-               :key="index"
-               :obj="network"></Hello>
+
 
     </div>
 </template>
