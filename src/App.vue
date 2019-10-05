@@ -8,8 +8,8 @@
                 <th ></th>
                 <th>ssid</th>
                 <th>mac</th>
-                <th>signal_level</th>
-                <th>channel</th>
+                <th>signal</th>
+                <th>ch</th>
                 <th></th>
             </thead>
             <tbody>
@@ -74,6 +74,10 @@
             position: fixed;
             top:0;
             right:0;
+        }
+        table {
+            border: 1px black solid;
+
         }
     }
 </style>

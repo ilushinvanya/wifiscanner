@@ -5,7 +5,10 @@
         </td>
         <td>{{obj.ssid}}</td>
         <td>{{obj.mac}}</td>
-        <td><span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}">  </span>{{obj.signal_level}}</td>
+        <td class="signal_level">
+            <span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}"> </span>
+            {{obj.signal_level}}
+        </td>
         <td>{{obj.channel}}</td>
         <td>
             <button @click="submit()">OK</button>
@@ -93,15 +96,20 @@
         p {
             margin: 0;
 
+
+        }
+        .signal_level {
+            background-image: linear-gradient(to left, #54f954, #de6363);
+            position: relative;
             span {
-                background-image: linear-gradient(to left, #54f954, #de6363);
-                height: 10px;
-                display: inline-block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
             }
         }
 
         button {
-            width: 100%;
             line-height: 20px;
         }
 
