@@ -92,7 +92,7 @@
     .item {
 
         &.yes {
-            background: #e4ffde;
+            background: #bcffb8;
         }
 
         input {
