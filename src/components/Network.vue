@@ -106,6 +106,7 @@
             text-overflow: ellipsis;
         }
         .signal_level {
+            width: 100px;
             background-image: linear-gradient(to left, #54f954, #de6363);
             position: relative;
             span {
