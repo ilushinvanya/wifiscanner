@@ -103,7 +103,11 @@
         }
         .ssid {
             width: 100px;
-            text-overflow: fade;
+            overflow: hidden;
+            :hover {
+                overflow: visible;
+                background: white;
+            }
         }
         .signal_level {
             width: 100px;
