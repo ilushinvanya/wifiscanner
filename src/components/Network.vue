@@ -3,10 +3,10 @@
         <td>
             <input type="text" style="width: 50px" v-model="room" placeholder="room number"/>
         </td>
-        <td>{{obj.ssid}}</td>
+        <td style="width: 150px">{{obj.ssid}}</td>
         <td>{{obj.mac}}</td>
         <td class="signal_level">
-            <span :style="{'width': 100 + parseInt(obj.signal_level) + 'px'}"> </span>
+            <span :style="{'width': 100 - Math.abs(parseInt(obj.signal_level)) + 'px'}"> </span>
             {{obj.signal_level}}
         </td>
         <td>{{obj.channel}}</td>
