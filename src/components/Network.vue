@@ -1,7 +1,7 @@
 <template>
     <tr class="item" :class="{ 'yes' : id}">
         <td>
-            <input type="text" style="width: 100px" v-model="room" placeholder="room number"/>
+            <input type="text" style="width: 50px" v-model="room" placeholder="room number"/>
         </td>
         <td>{{obj.ssid}}</td>
         <td>{{obj.mac}}</td>
@@ -103,6 +103,8 @@
             position: relative;
             span {
                 position: absolute;
+                z-index: 11;
+                background: white;
                 top: 0;
                 right: 0;
                 height: 100%;
