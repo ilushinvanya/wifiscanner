@@ -86,15 +86,10 @@
 
 <style scoped lang="scss">
     td {
-        padding: 5px; /* Поля вокруг содержимого ячеек */
+        padding: 2px; /* Поля вокруг содержимого ячеек */
         border: 1px solid black; /* Граница вокруг ячеек */
     }
     .item {
-        font-size: 10px;
-        padding: 2px;
-        border: 1px #7c7c7c solid;
-        margin: 2px;
-        text-align: left;
 
         &.yes {
             background: #e4ffde;
@@ -108,7 +103,7 @@
         }
         .ssid {
             width: 100px;
-            text-overflow: ellipsis;
+            text-overflow: fade;
         }
         .signal_level {
             width: 100px;
