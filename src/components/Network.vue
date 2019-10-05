@@ -85,6 +85,10 @@
 </script>
 
 <style scoped lang="scss">
+    td {
+        padding: 5px; /* Поля вокруг содержимого ячеек */
+        border: 1px solid black; /* Граница вокруг ячеек */
+    }
     .item {
         padding: 2px;
         border: 1px #7c7c7c solid;
@@ -107,7 +111,7 @@
         }
         .signal_level {
             width: 100px;
-            background-image: linear-gradient(to left, #54f954, #de6363);
+            background-image: linear-gradient(to left, #54f954, #ded103);
             position: relative;
             span {
                 position: absolute;
