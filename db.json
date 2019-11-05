@@ -1,55 +1,5 @@
 {
-  "wifiscanner": [
-    {
-      "ssid": "2345",
-      "signal": "-60",
-      "mac": "06:23:77:66:77",
-      "channel": "1"
-    },
-    {
-      "ssid": "Samsung",
-      "signal": "-61",
-      "mac": "05:23:77:66:77",
-      "channel": "2"
-    },
-    {
-      "ssid": "police",
-      "signal": "-62",
-      "mac": "04:23:77:66:77",
-      "channel": "3"
-    },
-    {
-      "ssid": "Putin",
-      "signal": "-63",
-      "mac": "03:23:77:66:77",
-      "channel": "4"
-    },
-    {
-      "ssid": "huy",
-      "signal": "-64",
-      "mac": "02:31:09:99:77",
-      "channel": "5"
-    }
-  ],
   "rooms": [
-    {
-      "room": "123",
-      "mac": "05:23:77:66:77",
-      "ssid": "Samsung",
-      "id": 1
-    },
-    {
-      "room": "0000",
-      "mac": "10:7B:EF:5F:38:EC",
-      "ssid": "Gopher",
-      "id": 12
-    },
-    {
-      "room": "111",
-      "mac": "cc:2d:e0:a4:d7:e9",
-      "ssid": "Pilki_work",
-      "id": 14
-    },
     {
       "room": "206",
       "mac": "58:0A:20:5A:54:C0",
